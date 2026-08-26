@@ -19,6 +19,7 @@ string name;
      a=name;
      b=rollno;
      x=marks;
+     cout<<"\n\n";
      cout<<"\n Name of student 1 is "<<a;
      cout<<"\n Roll no. of student 1 is "<<b;
      cout<<"\n Marks of student 1 is "<<x;
@@ -30,6 +31,7 @@ string name;
      m=name;
      n=rollno;
      y=marks;
+     cout<<"\n\n";
      cout<<"\n Name of student 2 is "<<m;
      cout<<"\n Roll no. of  student 2 is "<<n;
      cout<<"\n Marks of student 2 is "<<y;
@@ -52,5 +54,5 @@ int main()
   s2.display2();
 
 
-  return 0
+  return 0 ;
  }
