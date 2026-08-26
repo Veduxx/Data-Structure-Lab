@@ -1,0 +1,56 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+
+
+class Student
+{
+public:
+int marks,rollno;
+string name;
+
+
+ void display1()
+  {
+     int x,b; 
+     string a;
+     a=name;
+     b=rollno;
+     x=marks;
+     cout<<"\n Name of student 1 is "<<a;
+     cout<<"\n Roll no. of student 1 is "<<b;
+     cout<<"\n Marks of student 1 is "<<x;
+  }
+ void display2()
+  {
+     int y,n;
+     string m;
+     m=name;
+     n=rollno;
+     y=marks;
+     cout<<"\n Name of student 2 is "<<m;
+     cout<<"\n Roll no. of  student 2 is "<<n;
+     cout<<"\n Marks of student 2 is "<<y;
+  }
+  };
+
+
+
+int main()
+ {
+  Student s1;
+  Student s2;
+  s1.name="Rahul";
+  s2.name="Shweta";
+  s1.rollno=56;
+  s2.rollno=13;
+  s1.marks=30;
+  s2.marks=20;
+  s1.display1();
+  s2.display2();
+
+
+  return 0
+ }
