@@ -15,7 +15,7 @@ int main()
    cout<<"\n2. Display Book.";
    cout<<"\n3. Search Book.";
    cout<<"\n4. Exit.";
-   cout<<"\nENter your choice:";
+   cout<<"\nEnter your choice:";
    
   if(choice==1)
   {
