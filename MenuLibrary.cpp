@@ -1,69 +1,65 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main()
-{
-  int book[10];
-  int n=0;
-  int choice;
-  int searchID;
- 
-  do
-  {
 
-   cout<<"\n\n===== SMART LIBRARY =====";
-   cout<<"\n1. Add Book.";
-   cout<<"\n2. Display Book.";
-   cout<<"\n3. Search Book.";
-   cout<<"\n4. Exit.";
-   cout<<"\nEnter your choice:";
+int main() {
+    int book[10];
+    int n = 0;
+    int choice;
+    int searchID;
    
-  if(choice==1)
-  {
-    cout <<"Enter Book ID:";
-    cin>>book[n];
-    n++;
-    cout<<"Book Added!";
-  }
-  else if(choice==2)
-  {
-    cout<<"\nBooks in Library:\n";
-    for (int i=0;i<n;i++)
-    { 
-     cin>>book[i];
-    }
-  }
-  else if(choice==3)
-  {
-   cout<<"\nEnter Book ID to search:\n";
-   cin>>searchID;
-   bool found = false;
-   for(int i=0;i<n;i++)
-     {
-         if (book[i]==searchID)
-           {
-            found=true;
-           }
-     }
-     if (found) 
-     { 
-     cout <<"Book Found.";
-     }
-     else
-     {
-      cout<<"Book Not Found.";
-     }
-  }
- else if(choice==4)
-  {
-   cout<<"Thank you!";
-  }
-else
- {
- cout<<"Invalid Choice!";
- }
-}
-while(choice!=4);
-return 0;
-}
+    do {
+        cout << "\n\n===== SMART LIBRARY =====";
+        cout << "\n1. Add Book.";
+        cout << "\n2. Display Book.";
+        cout << "\n3. Search Book.";
+        cout << "\n4. Exit.";
+        cout << "\nEnter your choice: ";
+        cin >> choice; // Fix: Read user choice inside the loop
+       
+        if (choice == 1) {
+            if (n < 10) { // Fix: Check if array has space
+                cout << "Enter Book ID: ";
+                cin >> book[n];
+                n++;
+                cout << "Book Added!";
+            } else {
+                cout << "Library is full! Cannot add more books.";
+            }
+        }
+        else if (choice == 2) {
+            cout << "\nBooks in Library:\n";
+            if (n == 0) {
+                cout << "No books available.";
+            } else {
+                for (int i = 0; i < n; i++) {
+                    cout << "Book " << (i + 1) << ": " << book[i] << "\n"; // Fix: Use cout instead of cin
+                }
+            }
+        }
+        else if (choice == 3) {
+            cout << "\nEnter Book ID to search: ";
+            cin >> searchID;
+            bool found = false;
+            for (int i = 0; i < n; i++) {
+                if (book[i] == searchID) {
+                    found = true;
+                    break;
+                }
+            }
+            if (found) {
+                cout << "Book Found.";
+            } else {
+                cout << "Book Not Found.";
+            }
+        }
+        else if (choice == 4) {
+            cout << "Thank you!\n";
+        }
+        else {
+            cout << "Invalid Choice!";
+        }
+    } 
+    while (choice != 4);
 
- 
+    return 0;
+}
