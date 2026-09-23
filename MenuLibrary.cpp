@@ -14,10 +14,10 @@ int main() {
         cout << "\n3. Search Book.";
         cout << "\n4. Exit.";
         cout << "\nEnter your choice: ";
-        cin >> choice; // Fix: Read user choice inside the loop
+        cin >> choice; 
        
         if (choice == 1) {
-            if (n < 10) { // Fix: Check if array has space
+            if (n < 10) { 
                 cout << "Enter Book ID: ";
                 cin >> book[n];
                 n++;
@@ -32,7 +32,7 @@ int main() {
                 cout << "No books available.";
             } else {
                 for (int i = 0; i < n; i++) {
-                    cout << "Book " << (i + 1) << ": " << book[i] << "\n"; // Fix: Use cout instead of cin
+                    cout << "Book " << (i + 1) << ": " << book[i] << "\n"; 
                 }
             }
         }
