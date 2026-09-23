@@ -9,7 +9,6 @@ int main()
 {
   int student[5];
   int n=0;
-  int choice;
   int search_student;
   int choice;
  
@@ -75,6 +74,6 @@ int main()
     cout<<"Invalid Choice!";
    }
  }
-  while(choice!=4)
+  while(choice!=4);
   return 0;
 }
