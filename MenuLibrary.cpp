@@ -59,7 +59,7 @@ int main()
   }
 else
  {
- cout<<"Inavalid Choice!";
+ cout<<"Invalid Choice!";
  }
 }
 while(choice!=4);
